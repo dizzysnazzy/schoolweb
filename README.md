@@ -1,2 +1,0 @@
-# schoolweb
-A school website 
