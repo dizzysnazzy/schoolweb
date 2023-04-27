@@ -1,0 +1,1093 @@
+{% extends 'base.html' %}
+
+{% block content%}
+<p>Home page</p>
+<style>    :root{
+    --primary-color:#1b5e20;
+    --accent-color: #4c8c4a;
+    --dark-color:#003300
+    }
+    #banner-overlay {
+        background: rgba(27,94,32,.8)!important;
+        min-height: 80vh!important;
+    }
+    #parallax{
+    background-size: cover!important;
+        background: linear-gradient(70deg, rgba(27,94,32,.9), rgba(76,140,74,1)),url("https://cdn.e-lib.win/gen4/articles/Olbutyo-girls-high-school-1625476486.webp") fixed center no-repeat
+    }
+    #motto{
+    background-size: cover!important;
+        background: linear-gradient(70deg, rgba(0,0,0,.9), rgba(0,0,0,1)),url("https://cdn.e-lib.win/gen4/articles/Olbutyo-girls-high-school-1625476486.webp") fixed center no-repeat
+    }
+    #banner{
+        background-size: cover!important;
+            background: linear-gradient(0deg, rgba(0, 0,0, 0.6), rgba(0, 0, 0, 0.6)), url("https://cdn.e-lib.win/gen4/articles/Olbutyo-girls-high-school-1625476486.webp") no-repeat center;
+    }
+    #page-banner{
+        background-size: cover!important;
+        background: linear-gradient(70deg, rgba(27,94,32,.9), rgba(76,140,74.9)) fixed center no-repeat;
+    
+    }
+</style>    <meta name="google-site-verification" content="yHEeRCMxKxw8t6paJv4Cu4FXHoe3oTRPaxuzBSePwgk" /></head>
+
+<div class="uk-visible@m" id="appBar">
+    <div id="logo">
+        <img src="https://elimulibrary.com/public/images/elimu_library_logo.jpg" alt="Olbutyo Girls High School">
+        Gen 4
+    </div>
+    <div id="title">
+        Olbutyo GIRLS HIGH SCHOOL    </div>
+    <div>
+            </div>
+    <div hidden id="links">
+        <a id="idbtn" href="#identification" hidden uk-toggle>I am a GUEST</a>
+    </div>
+</div>
+<div uk-sticky="sel-target: .uk-navbar-container; cls-active: uk-navbar-sticky; bottom: #transparent-sticky-navbar">
+    <nav class="uk-navbar-container" uk-navbar style="position: relative; z-index: 980;">
+        <!--my off canvas elements-->
+        <a class="uk-navbar-toggle  uk-hidden@m"  uk-toggle="target: #offcanvas" href="#offcanvas">
+            <span uk-navbar-toggle-icon></span> <span class="uk-margin-small-left">Menu</span>
+        </a>
+        <a href="/" class="uk-navbar-brand uk-navbar-right uk-hidden@m" style="font-family:'Playfair display';color: #1e87f0;font-weight: 700;font-size: 1.5em;text-decoration: none" data-uk-off-canvas>
+            <img width="100" src="https://elimulibrary.com/public/images/elimu_library_logo.jpg" alt="Olbutyo Girls High School">
+        </a>
+        <!--end of my offcanvas elements-->
+
+        <div class="uk-navbar-left uk-visible@m">
+                    </div>
+        <div class="uk-navbar-right uk-visible@m">
+            <ul class="uk-navbar-nav" >
+    <li class="uk-active"><a href="/">Home</a></li>
+    <li class=""><a href="/school-pages">School Pages</a></li>
+    <li class=""><a href="/photo-gallery">Gallery</a></li>
+    <li hidden>
+        <a href="/news-and-articles">Education News</a>
+        <div class="uk-navbar-dropdown">
+            <ul class="uk-nav uk-navbar-dropdown-nav">
+                <li class="uk-active"><a href="#">Active</a></li>
+                <li><a href="#">Item</a></li>
+                <li class="uk-nav-header">Header</li>
+                <li><a href="#">Item</a></li>
+                <li><a href="#">Item</a></li>
+                <li class="uk-nav-divider"></li>
+                <li><a href="#">Item</a></li>
+            </ul>
+        </div>
+    </li>
+    <li><a href="/student-exchange">Student Exchange</a></li>
+    <li><a href="/explored"><span class="explored-brand"><span>e</span><span style="text-transform: uppercase!important;">X</span><span>plored</span></span></a></li>
+    <li><a href="/career-series">Career Series</a></li>
+    <li><a href="/education-news">Education News</a></li>
+    <li><a href="/login">Staff</a></li>
+</ul>        </div>
+    </nav>
+</div>
+<div id="offcanvas" uk-offcanvas>
+    <div class="uk-offcanvas-bar">
+        <div uk-grid="" id="mobile-logo-section" hidden -class="uk-grid uk-grid-stack">
+            <img src="https://elimulibrary.com/public/images/elimu_library_logo.jpg" width="170" alt="Olbutyo Girls High School logo">
+        </div>
+        <ul class="uk-nav-default uk-nav-parent-icon" uk-nav>
+    <li class="uk-active"><a href="/">Home</a></li>
+    <li class=""><a href="/school-pages">School Pages</a></li>
+    <li class=""><a href="/photo-gallery">Gallery</a></li>
+    <li hidden>
+        <a href="/news-and-articles">Education News</a>
+        <div class="uk-navbar-dropdown">
+            <ul class="uk-nav uk-navbar-dropdown-nav">
+                <li class="uk-active"><a href="#">Active</a></li>
+                <li><a href="#">Item</a></li>
+                <li class="uk-nav-header">Header</li>
+                <li><a href="#">Item</a></li>
+                <li><a href="#">Item</a></li>
+                <li class="uk-nav-divider"></li>
+                <li><a href="#">Item</a></li>
+            </ul>
+        </div>
+    </li>
+    <li><a href="/student-exchange">Student Exchange</a></li>
+    <li><a href="/explored"><span class="explored-brand"><span>e</span><span style="text-transform: uppercase!important;">X</span><span>plored</span></span></a></li>
+    <li><a href="/career-series">Career Series</a></li>
+    <li><a href="/education-news">Education News</a></li>
+    <li><a href="/login">Staff</a></li>
+</ul>    </div>
+</div>
+
+    <div class="site-index">
+    <div id="banner" class="uk-grid">
+        <div class="uk-width-4-5@m" id="banner-overlay">
+            <div>
+                <h1 id="banner-heading">Olbutyo GIRLS HIGH SCHOOL</h1>
+                <p id="banner-description">Walk in the Light</p>
+                <section>
+                    <a href="/school-pages" class="btn-white">School Pages</a>
+                    <a href="/photo-gallery" class="btn-border-white">Gallery</a>
+                </section>
+                <br>
+                            </div>
+        </div>
+    </div>
+    <div id="mobile-breaker">
+        <h3>Our Vision</h3>
+        <p>To become a leading and most preferred National School in the provision of quality, excellence and holistic education for girls in Kenya.</p>
+    </div>
+    <div id="gen4-estate" class="uk-grid uk-child-width-1-4@m uk-child-width-1-2 uk-grid-collapse">
+                    <div class="school-intro">
+                <div class="icon-box">
+                    <i class="fas fa-hard-hat fa-3x"></i>
+                </div>
+                <h3>Principal's Desk</h3>
+                <p>
+                    Every week we will post views, ideas and communication from the school's administration here. We encourage you to always check this website for official information                </p>
+                <a href="http://www.Olbutyogirlshigh.sc.ke/news-and-articles" class="btn-white">More</a>
+            </div>
+                        <div class="school-intro">
+                <div class="icon-box">
+                    <i class="fas fa-hard-hat fa-3x"></i>
+                </div>
+                <h3>E-Learning with Longhorn</h3>
+                <p>
+                    Enter all our virtual classes, take e-Quizes, learn at your own pace and conquer hard topics. Work with KICD approved content from Longhorn. Start here...                </p>
+                <a href="http://bit.ly/Longhorn-Elimu-Elearning" class="btn-white">More</a>
+            </div>
+                        <div class="school-intro">
+                <div class="icon-box">
+                    <i class="fas fa-hard-hat fa-3x"></i>
+                </div>
+                <h3>News & Articles</h3>
+                <p>
+                    For all information about the school, check here for the latest school articles. Also find any reference information that you may need                 </p>
+                <a href="http://www.Olbutyogirlshigh.sc.ke/news-and-articles" class="btn-white">More</a>
+            </div>
+                        <div class="school-intro">
+                <div class="icon-box">
+                    <i class="fas fa-hard-hat fa-3x"></i>
+                </div>
+                <h3>Elimu Library</h3>
+                <p>
+                    Join top teachers and students for learning material, class notes, exams, revision papers, schemes of work, lesson plans and much more                </p>
+                <a href="http://www.elimulibrary.com/?rid=sch-Olbutyo-girls-high-school-659" class="btn-white">More</a>
+            </div>
+                </div>
+    <div class="uk-grid uk-grid-collapse">
+        <div class="uk-width-3-4@m">
+            <div id="welcome" class="uk-grid">
+                <div id="school-intro" class="uk-width-1-3@m">
+                    <div>
+                        <span>Welcome <br></span>
+                        to Olbutyo Girls High School                                            </div>
+                </div>
+                <div class="uk-width-2-3@m">
+                    <p>
+                        Walk in the Light                    </p>
+                    <span>- <br></span>
+                    <small>Principal</small>
+                    <!--                    <div style="padding: .2rem" class="uk-visible@m uk-margin">-->
+                    <!--                        <a target="_blank" href="https://bit.ly/Secure-My-Fees">-->
+                    <!--                            <img src="https://cdn.e-lib.win/common/britam-elimu-secure-fees.webp" alt="">-->
+                    <!--                        </a>-->
+                    <!--                    </div>-->
+                                    </div>
+            </div>
+            <div style="padding: .2rem" class="uk-hidden uk-margin">
+                <a target="_blank" href="https://bit.ly/Secure-My-Fees">
+                    <img src="https://cdn.e-lib.win/common/britam-elimu-secure-fees.webp" alt="">
+                </a>
+            </div>
+        </div>
+        <div class="uk-width-1-4@m">
+            <div class="elimu-links uk-visible@m">
+                                    <a href="https://www.elimulibrary.com/site/category/1/schemes-of-work?rid=sch-Olbutyo-girls-high-school-659" target="_blank">Schemes of Work</a>
+                                        <a href="https://www.elimulibrary.com/site/category/4/primary-exams?rid=sch-Olbutyo-girls-high-school-659" target="_blank">Primary Exams</a>
+                                        <a href="https://www.elimulibrary.com/site/category/2/lesson-plans?rid=sch-Olbutyo-girls-high-school-659" target="_blank">Lesson Plans</a>
+                                        <a href="https://www.elimulibrary.com/site/category/7/cbc-curriculum-designs?rid=sch-Olbutyo-girls-high-school-659" target="_blank">CBC Curriculum Designs</a>
+                                        <a href="https://www.elimulibrary.com/site/category/6/primary-notes?rid=sch-Olbutyo-girls-high-school-659" target="_blank">Primary Notes</a>
+                                        <a href="https://www.elimulibrary.com/site/category/3/secondary-exams?rid=sch-Olbutyo-girls-high-school-659" target="_blank">Secondary Exams</a>
+                                        <a href="https://www.elimulibrary.com/site/category/16/records-of-work?rid=sch-Olbutyo-girls-high-school-659" target="_blank">Records of Work</a>
+                                        <a href="https://www.elimulibrary.com/site/category/27/holiday-homework?rid=sch-Olbutyo-girls-high-school-659" target="_blank">Holiday Homework</a>
+                                        <a href="https://www.elimulibrary.com/site/category/5/secondary-notes?rid=sch-Olbutyo-girls-high-school-659" target="_blank">Secondary Notes</a>
+                                </div>
+            <h3 class="uk-hidden@m">
+                Notes & Revision
+            </h3>
+            <div uk-slider="autoplay:true;center:true" class="elimu-links uk-hidden@m">
+                <div class="uk-grid uk-slider-items uk-child-width-auto uk-grid-collapse">
+                                            <a href="https://www.elimulibrary.com/site/category/1/schemes-of-work?rid=sch-Olbutyo-girls-high-school-659" target="_blank">Schemes of Work</a>
+                                                <a href="https://www.elimulibrary.com/site/category/4/primary-exams?rid=sch-Olbutyo-girls-high-school-659" target="_blank">Primary Exams</a>
+                                                <a href="https://www.elimulibrary.com/site/category/2/lesson-plans?rid=sch-Olbutyo-girls-high-school-659" target="_blank">Lesson Plans</a>
+                                                <a href="https://www.elimulibrary.com/site/category/7/cbc-curriculum-designs?rid=sch-Olbutyo-girls-high-school-659" target="_blank">CBC Curriculum Designs</a>
+                                                <a href="https://www.elimulibrary.com/site/category/6/primary-notes?rid=sch-Olbutyo-girls-high-school-659" target="_blank">Primary Notes</a>
+                                                <a href="https://www.elimulibrary.com/site/category/3/secondary-exams?rid=sch-Olbutyo-girls-high-school-659" target="_blank">Secondary Exams</a>
+                                                <a href="https://www.elimulibrary.com/site/category/16/records-of-work?rid=sch-Olbutyo-girls-high-school-659" target="_blank">Records of Work</a>
+                                                <a href="https://www.elimulibrary.com/site/category/27/holiday-homework?rid=sch-Olbutyo-girls-high-school-659" target="_blank">Holiday Homework</a>
+                                                <a href="https://www.elimulibrary.com/site/category/5/secondary-notes?rid=sch-Olbutyo-girls-high-school-659" target="_blank">Secondary Notes</a>
+                                        </div>
+            </div>
+        </div>
+    </div>
+    <div id="parallax">
+        <div>
+            <section id="enroll">
+                <h4 class="uk-margin-remove">For enquiries, call us on: </h4>
+                <p class="uk-margin-remove uk-visible@s">To provide a conducive environment and to offer quality, excellent and holistic education that motivates students to discover their talents and strive to reach their potential,thereby equipping them to fit well in society and contribute positively to Nati</p>
+            </section>
+            <section id="pcontact">
+                <i class="fas fa-phone-volume"></i> +254202012533            </section>
+            <p class="uk-margin uk-hidden@s">To provide a conducive environment and to offer quality, excellent and holistic education that motivates students to discover their talents and strive to reach their potential,thereby equipping them to fit well in society and contribute positively to Nati</p>
+
+        </div>
+    </div>
+    <div uk-slider="autoplay: true;center:true" id="career-series">
+        <small>ELIMU</small>
+        <h2>Latest pages</h2>
+        <div class="uk-position-relative uk-visible-toggle" tabindex="-1" uk-slider>
+
+            <div class="uk-slider-items uk-grid-small uk-grid-match uk-child-width-3-4 uk-child-width-1-2@s uk-child-width-1-3@m uk-grid">
+                
+<div>
+    <div class="uk-card uk-card-default uk-margin-small-bottom">
+        <div class="career-header">
+            <div class="uk-grid-small uk-flex-middle" uk-grid>
+                <div class="uk-width-auto">
+                    <sl-avatar initials="K"></sl-avatar>
+                </div>
+                <div class="uk-width-expand">
+                    <p class="uk-text-meta uk-margin-remove-top">
+                        <time datetime="2016-04-01T19:00">Dec 16, 2021</time>
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="career-body">
+            <h4><a href="/article/education-news/6822/kenya-primary-education-development-priede-project">Kenya Primary Education Development (PRIEDE) Project</a></h4>
+            <div class="career-intro">
+                
+The Kenya Primary Education Development (PRIEDE) Project
+The targets of the Kenya Primary Education Development (PRIEDE) project funded by the Global Partnership for Education (GPE) to the tune of Sh. 8 billion in line with the Competence Based Cu            </div>
+        </div>
+        <div class="uk-card-footer career-footer">
+            <a href="/article/education-news/6822/kenya-primary-education-development-priede-project" class="uk-button uk-button-text">Read more</a>
+        </div>
+    </div>
+</div>
+
+<div>
+    <div class="uk-card uk-card-default uk-margin-small-bottom">
+        <div class="career-header">
+            <div class="uk-grid-small uk-flex-middle" uk-grid>
+                <div class="uk-width-auto">
+                    <sl-avatar initials="S"></sl-avatar>
+                </div>
+                <div class="uk-width-expand">
+                    <p class="uk-text-meta uk-margin-remove-top">
+                        <time datetime="2016-04-01T19:00">Dec 14, 2021</time>
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="career-body">
+            <h4><a href="/article/education-news/6821/school-net-program">SCHOOL NET PROGRAM</a></h4>
+            <div class="career-intro">
+                Learners in secondary and primary schools have been encouraged to use the internet to conduct meaningful research so as to gain useful knowledge that will enable them to improve their performance in national examinations.
+Principal Secretary in char            </div>
+        </div>
+        <div class="uk-card-footer career-footer">
+            <a href="/article/education-news/6821/school-net-program" class="uk-button uk-button-text">Read more</a>
+        </div>
+    </div>
+</div>
+
+<div>
+    <div class="uk-card uk-card-default uk-margin-small-bottom">
+        <div class="career-header">
+            <div class="uk-grid-small uk-flex-middle" uk-grid>
+                <div class="uk-width-auto">
+                    <sl-avatar initials="J"></sl-avatar>
+                </div>
+                <div class="uk-width-expand">
+                    <p class="uk-text-meta uk-margin-remove-top">
+                        <time datetime="2016-04-01T19:00">Dec 13, 2021</time>
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="career-body">
+            <h4><a href="/article/school-pages/6820/job-advertisement-finance-officer-position">JOB ADVERTISEMENT- FINANCE OFFICER POSITION</a></h4>
+            <div class="career-intro">
+                JOB ADVERTISEMENT- FINANCE OFFICER POSITIONOlbutyo Girls High School situated in Kikuyu, Kiambu County, seeks to recruit a qualified and experienced person for the above position.Reporting to the Chief Principal/ BOM secretary, the successful candid            </div>
+        </div>
+        <div class="uk-card-footer career-footer">
+            <a href="/article/school-pages/6820/job-advertisement-finance-officer-position" class="uk-button uk-button-text">Read more</a>
+        </div>
+    </div>
+</div>
+
+<div>
+    <div class="uk-card uk-card-default uk-margin-small-bottom">
+        <div class="career-header">
+            <div class="uk-grid-small uk-flex-middle" uk-grid>
+                <div class="uk-width-auto">
+                    <sl-avatar initials="C"></sl-avatar>
+                </div>
+                <div class="uk-width-expand">
+                    <p class="uk-text-meta uk-margin-remove-top">
+                        <time datetime="2016-04-01T19:00">Dec 03, 2021</time>
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="career-body">
+            <h4><a href="/article/education-news/6817/cs-first-clubs-in-kenya">CS FIRST CLUBS IN KENYA</a></h4>
+            <div class="career-intro">
+                Dear Principal,
+RE: CS FIRST CLUBS IN KENYA
+Computer Science First: An Overview
+CS First (cs-first.com) is a Google program created by educators and computer scientists that introduces coding andcomputer science to students in a collaborative and             </div>
+        </div>
+        <div class="uk-card-footer career-footer">
+            <a href="/article/education-news/6817/cs-first-clubs-in-kenya" class="uk-button uk-button-text">Read more</a>
+        </div>
+    </div>
+</div>
+
+<div>
+    <div class="uk-card uk-card-default uk-margin-small-bottom">
+        <div class="career-header">
+            <div class="uk-grid-small uk-flex-middle" uk-grid>
+                <div class="uk-width-auto">
+                    <sl-avatar initials="G"></sl-avatar>
+                </div>
+                <div class="uk-width-expand">
+                    <p class="uk-text-meta uk-margin-remove-top">
+                        <time datetime="2016-04-01T19:00">Nov 22, 2021</time>
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="career-body">
+            <h4><a href="/article/education-news/6813/gradual-and-safe-resumption-of-co-curriclar-activities-in-school">GRADUAL AND SAFE RESUMPTION OF CO-CURRICLAR ACTIVITIES IN SCHOOL.</a></h4>
+            <div class="career-intro">
+                In February, 2021, the ministry of Education with the support of Ministry of Health and Ministry of Sports Culture and Heritage developed the Covid-19 safety and health protocols/guidelines that will enable the gradual and safe resumption of Co-curri            </div>
+        </div>
+        <div class="uk-card-footer career-footer">
+            <a href="/article/education-news/6813/gradual-and-safe-resumption-of-co-curriclar-activities-in-school" class="uk-button uk-button-text">Read more</a>
+        </div>
+    </div>
+</div>
+
+<div>
+    <div class="uk-card uk-card-default uk-margin-small-bottom">
+        <div class="career-header">
+            <div class="uk-grid-small uk-flex-middle" uk-grid>
+                <div class="uk-width-auto">
+                    <sl-avatar initials="T"></sl-avatar>
+                </div>
+                <div class="uk-width-expand">
+                    <p class="uk-text-meta uk-margin-remove-top">
+                        <time datetime="2016-04-01T19:00">Oct 07, 2021</time>
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="career-body">
+            <h4><a href="/article/school-pages/6793/the-2021-young-scientists-kenya-online-national-science-exhibition">THE 2021 YOUNG SCIENTISTS KENYA ONLINE NATIONAL SCIENCE EXHIBITION</a></h4>
+            <div class="career-intro">
+                A group of students from our school are participating in the The 2021 Young Scientists Kenya Online National Science Exhibition. Their projects is found under different categories as shown below:SNProject TitleCategoryStudentsSchool1CBC grade tracker            </div>
+        </div>
+        <div class="uk-card-footer career-footer">
+            <a href="/article/school-pages/6793/the-2021-young-scientists-kenya-online-national-science-exhibition" class="uk-button uk-button-text">Read more</a>
+        </div>
+    </div>
+</div>
+
+<div>
+    <div class="uk-card uk-card-default uk-margin-small-bottom">
+        <div class="career-header">
+            <div class="uk-grid-small uk-flex-middle" uk-grid>
+                <div class="uk-width-auto">
+                    <sl-avatar initials="F"></sl-avatar>
+                </div>
+                <div class="uk-width-expand">
+                    <p class="uk-text-meta uk-margin-remove-top">
+                        <time datetime="2016-04-01T19:00">Apr 14, 2021</time>
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="career-body">
+            <h4><a href="/article/career-series/6638/factors-that-influence-career-choices">Factors that Influence Career Choices</a></h4>
+            <div class="career-intro">
+                Why do people opt for careers in which they do? For example, why would a person choose to be a plumber as compared to a surgeon? There are different reasons leading to why a person pursues the career in which they do. Some of these factors are positi            </div>
+        </div>
+        <div class="uk-card-footer career-footer">
+            <a href="/article/career-series/6638/factors-that-influence-career-choices" class="uk-button uk-button-text">Read more</a>
+        </div>
+    </div>
+</div>
+
+<div>
+    <div class="uk-card uk-card-default uk-margin-small-bottom">
+        <div class="career-header">
+            <div class="uk-grid-small uk-flex-middle" uk-grid>
+                <div class="uk-width-auto">
+                    <sl-avatar initials="F"></sl-avatar>
+                </div>
+                <div class="uk-width-expand">
+                    <p class="uk-text-meta uk-margin-remove-top">
+                        <time datetime="2016-04-01T19:00">Apr 14, 2021</time>
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="career-body">
+            <h4><a href="/article/explored/6637/finding-your-life-purpose-and-goals">Finding Your Life Purpose and Goals</a></h4>
+            <div class="career-intro">
+                A life purpose! This is a phrase that we come across very often. Personally, I never used to give much thought to it. It can be very confusing to think about, I mean what is even a life purpose and how in the world are we supposed to know what it is             </div>
+        </div>
+        <div class="uk-card-footer career-footer">
+            <a href="/article/explored/6637/finding-your-life-purpose-and-goals" class="uk-button uk-button-text">Read more</a>
+        </div>
+    </div>
+</div>
+
+<div>
+    <div class="uk-card uk-card-default uk-margin-small-bottom">
+        <div class="career-header">
+            <div class="uk-grid-small uk-flex-middle" uk-grid>
+                <div class="uk-width-auto">
+                    <sl-avatar initials="I"></sl-avatar>
+                </div>
+                <div class="uk-width-expand">
+                    <p class="uk-text-meta uk-margin-remove-top">
+                        <time datetime="2016-04-01T19:00">Mar 30, 2021</time>
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="career-body">
+            <h4><a href="/article/education-news/6600/integrity-in-administration-of-exams">Integrity in administration of exams</a></h4>
+            <div class="career-intro">
+                Migori March 28, 2021
+The Principal Secretary for Early Learning Basic Education and early learning Dr. Julius Jwan has said cheating in examinations messes up the careers and lives of the students.
+He said the students who end up getting marks or             </div>
+        </div>
+        <div class="uk-card-footer career-footer">
+            <a href="/article/education-news/6600/integrity-in-administration-of-exams" class="uk-button uk-button-text">Read more</a>
+        </div>
+    </div>
+</div>
+
+<div>
+    <div class="uk-card uk-card-default uk-margin-small-bottom">
+        <div class="career-header">
+            <div class="uk-grid-small uk-flex-middle" uk-grid>
+                <div class="uk-width-auto">
+                    <sl-avatar initials="H"></sl-avatar>
+                </div>
+                <div class="uk-width-expand">
+                    <p class="uk-text-meta uk-margin-remove-top">
+                        <time datetime="2016-04-01T19:00">Mar 04, 2021</time>
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="career-body">
+            <h4><a href="/article/career-series/6576/how-to-choose-a-competitive-career">How To Choose A Competitive Career</a></h4>
+            <div class="career-intro">
+                Every year, we receive thousands of inquiries from school leavers on the various programmes they can undertake at University and tertiary institutions. Whereas a few of them seem to have reasonable knowledge on post-secondary training, there are nume            </div>
+        </div>
+        <div class="uk-card-footer career-footer">
+            <a href="/article/career-series/6576/how-to-choose-a-competitive-career" class="uk-button uk-button-text">Read more</a>
+        </div>
+    </div>
+</div>
+
+<div>
+    <div class="uk-card uk-card-default uk-margin-small-bottom">
+        <div class="career-header">
+            <div class="uk-grid-small uk-flex-middle" uk-grid>
+                <div class="uk-width-auto">
+                    <sl-avatar initials="T"></sl-avatar>
+                </div>
+                <div class="uk-width-expand">
+                    <p class="uk-text-meta uk-margin-remove-top">
+                        <time datetime="2016-04-01T19:00">Mar 04, 2021</time>
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="career-body">
+            <h4><a href="/article/explored/6575/time-management-tips">Time Management Tips</a></h4>
+            <div class="career-intro">
+                To complete your course and unlock the infinite potential that it holds for you, time management is crucial. Time mismanagement can derail you from your career path. But it is a skill that is not only important in one&rsquo;s studies, but in life as             </div>
+        </div>
+        <div class="uk-card-footer career-footer">
+            <a href="/article/explored/6575/time-management-tips" class="uk-button uk-button-text">Read more</a>
+        </div>
+    </div>
+</div>
+
+<div>
+    <div class="uk-card uk-card-default uk-margin-small-bottom">
+        <div class="career-header">
+            <div class="uk-grid-small uk-flex-middle" uk-grid>
+                <div class="uk-width-auto">
+                    <sl-avatar initials="T"></sl-avatar>
+                </div>
+                <div class="uk-width-expand">
+                    <p class="uk-text-meta uk-margin-remove-top">
+                        <time datetime="2016-04-01T19:00">Mar 02, 2021</time>
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="career-body">
+            <h4><a href="/article/education-news/6572/tvet">TVET</a></h4>
+            <div class="career-intro">
+                Nairobi Ministry of Education February, 24, 2021
+The success of the Competence Based Curriculum (CBC) depends on the foundations&nbsp; of Technical and Vocational Education and Training&nbsp;&nbsp;(TVET)&nbsp;&nbsp;system, the Principal Secretary fo            </div>
+        </div>
+        <div class="uk-card-footer career-footer">
+            <a href="/article/education-news/6572/tvet" class="uk-button uk-button-text">Read more</a>
+        </div>
+    </div>
+</div>
+
+            </div>
+
+            <ul class="uk-slider-nav uk-dotnav uk-flex-center uk-margin"></ul>
+        </div>
+    </div>
+    <div class="uk-grid uk-grid-match">
+        <div class="uk-width-1-3@m">
+            <div id="explored">
+                <h3>Important</h3>
+                <p>
+                    Check out updates from the school here regularly so as not to miss out on any crucial information.                </p>
+                <p><a href="http://www.Olbutyogirlshigh.sc.ke/explored" class="uk-margin-remove btn-white">Explored series</a></p>
+            </div>
+        </div>
+        <div uk-slider="autoplay: true" id="explored-content" class="uk-width-2-3@m">
+            <div class="uk-slider-items uk-grid uk-grid-small uk-child-width-1-2@s uk-child-width-2-3">
+                
+<a href="/article/school-pages/6820/job-advertisement-finance-officer-position" class="explored-series">
+    <img loading="lazy" src="https://cdn.e-lib.win/gen4/articles/Olbutyo-girls-high-school-1611933892.webp" alt="JOB ADVERTISEMENT- FINANCE OFFICER POSITION">
+    <div>
+        <p>
+            <time>Olbutyo Girls High School</time>
+        </p>
+        <h4>JOB ADVERTISEMENT- FINANCE OFFICER POSITION</h4>
+        <p>JOB ADVERTISEMENT- FINANCE OFFICER POSITIONOlbutyo Girls High School situated in Kikuyu, Kiambu Cou...</p>
+    </div>
+</a>
+
+<a href="/article/school-pages/6793/the-2021-young-scientists-kenya-online-national-science-exhibition" class="explored-series">
+    <img loading="lazy" src="https://cdn.e-lib.win/gen4/articles/Olbutyo-girls-high-school-1637218656.webp" alt="THE 2021 YOUNG SCIENTISTS KENYA ONLINE NATIONAL SCIENCE EXHIBITION">
+    <div>
+        <p>
+            <time>Olbutyo Girls High School</time>
+        </p>
+        <h4>THE 2021 YOUNG SCIENTISTS KENYA ONLINE NATIONAL SCIENCE EXHIBITION</h4>
+        <p>A group of students from our school are participating in the The 2021 Young Scientists Kenya Online...</p>
+    </div>
+</a>
+
+<a href="/article/school-pages/3308/board-of-management" class="explored-series">
+    <img loading="lazy" src="https://cdn.e-lib.win/gen4/articles/Olbutyo-girls-high-school-1637218699.webp" alt=" Board of Management">
+    <div>
+        <p>
+            <time>Olbutyo Girls High School</time>
+        </p>
+        <h4> Board of Management</h4>
+        <p>MEMBERS OF THE BOARD OF MANAGEMENT
+1. Eng. J.K. Njoroge&nbsp; -Chairman
+2. Mr. Donald Kaniaru
+3....</p>
+    </div>
+</a>
+
+<a href="/article/school-pages/3304/vision-and-mission" class="explored-series">
+    <img loading="lazy" src="https://cdn.e-lib.win/gen4/articles/Olbutyo-girls-high-school-1625483946.webp" alt="  Vision and Mission">
+    <div>
+        <p>
+            <time>Olbutyo Girls High School</time>
+        </p>
+        <h4>  Vision and Mission</h4>
+        <p>VisionTo become a leading and most preferred National School in the provision of quality, excellence...</p>
+    </div>
+</a>
+
+<a href="/article/school-pages/3303/kcse-exam-analysis" class="explored-series">
+    <img loading="lazy" src="https://cdn.e-lib.win/gen4/articles/Olbutyo-girls-high-school-1625476423.webp" alt="KCSE Exam analysis">
+    <div>
+        <p>
+            <time>Olbutyo Girls High School</time>
+        </p>
+        <h4>KCSE Exam analysis</h4>
+        <p>Olbutyo GIRLS’ HIGH SCHOOL RESULTS SINCE 1989&nbsp;&nbsp;YEARENTRYAA-B+BB-C+CC-D+DD-EGRADEMEAN20204...</p>
+    </div>
+</a>
+
+<a href="/article/school-pages/3301/school-life" class="explored-series">
+    <img loading="lazy" src="https://cdn.e-lib.win/gen4/articles/Olbutyo-girls-high-school-1637218620.webp" alt="School Life">
+    <div>
+        <p>
+            <time>Olbutyo Girls High School</time>
+        </p>
+        <h4>School Life</h4>
+        <p>The school has 9 streams in each form and the girls are accommodated in&nbsp;18 very comfortable and...</p>
+    </div>
+</a>
+
+<a href="/article/school-pages/3300/historical-perspective" class="explored-series">
+    <img loading="lazy" src="https://cdn.e-lib.win/gen4/articles/Olbutyo-girls-high-school-1625477234.webp" alt=" Historical Perspective">
+    <div>
+        <p>
+            <time>Olbutyo Girls High School</time>
+        </p>
+        <h4> Historical Perspective</h4>
+        <p>Historical BackgroundOlbutyo Girls High School sits on 71 acres of land and was the first African G...</p>
+    </div>
+</a>
+
+<a href="/article/school-pages/3299/accolades" class="explored-series">
+    <img loading="lazy" src="https://cdn.e-lib.win/gen4/articles/Olbutyo-girls-high-school-1625476184.webp" alt="Accolades">
+    <div>
+        <p>
+            <time>Olbutyo Girls High School</time>
+        </p>
+        <h4>Accolades</h4>
+        <p>2009 Drama : Best Item on National Unity, National Drama Festival 2009 -Best Tragedy -Winning Play,...</p>
+    </div>
+</a>
+
+<a href="/article/school-pages/3298/crest-amp-school-song" class="explored-series">
+    <img loading="lazy" src="https://cdn.e-lib.win/gen4/articles/Olbutyo-girls-high-school-1637218556.webp" alt=" Crest &amp; School Song">
+    <div>
+        <p>
+            <time>Olbutyo Girls High School</time>
+        </p>
+        <h4> Crest &amp; School Song</h4>
+        <p>&nbsp;SCHOOL CRESTThe crest is composed of a yellow flaming torch superimposed over St. Andrew’s Cro...</p>
+    </div>
+</a>
+
+<a href="/article/school-pages/3297/contact-us" class="explored-series">
+    <img loading="lazy" src="https://cdn.e-lib.win/gen4/articles/Olbutyo-girls-high-school-1625476184.webp" alt="Contact Us">
+    <div>
+        <p>
+            <time>Olbutyo Girls High School</time>
+        </p>
+        <h4>Contact Us</h4>
+        <p>&nbsp;Olbutyo Girls High SchoolP.O.BOX 109- 00902 KIKUYUTel: 020-2012533, 0746-623674Accounts Tel:...</p>
+    </div>
+</a>
+
+<a href="/article/school-pages/3296/important-term-dates" class="explored-series">
+    <img loading="lazy" src="https://cdn.e-lib.win/gen4/articles/Olbutyo-girls-high-school-1611933930.webp" alt=" Important Term dates">
+    <div>
+        <p>
+            <time>Olbutyo Girls High School</time>
+        </p>
+        <h4> Important Term dates</h4>
+        <p>TERM 2 2015
+Beginning of Term II &nbsp;2015: &nbsp; &nbsp;Tuesday 6th May,2015 by 4:30 pm.
+Form 4...</p>
+    </div>
+</a>
+
+<a href="/article/school-pages/3295/fees" class="explored-series">
+    <img loading="lazy" src="https://cdn.e-lib.win/gen4/articles/Olbutyo-girls-high-school-1637218656.webp" alt="Fees">
+    <div>
+        <p>
+            <time>Olbutyo Girls High School</time>
+        </p>
+        <h4>Fees</h4>
+        <p>Olbutyo GIRLS ACCOUNT DETAILS
+The school Account number is:
+
+
+
+
+BANK:
+KCB
+
+
+A/C NAME:
+&n...</p>
+    </div>
+</a>
+
+            </div>
+            <ul class="uk-slider-nav uk-dotnav uk-flex-center uk-margin"></ul>
+        </div>
+    </div>
+    <div class="gen4-section">
+    <h2 class="uk-margin-remove uk-text-center">Study Corner</h2>
+    <h4 class="uk-margin-remove uk-text-center">Get lesson plans, exams notes & schemes of work</h4>
+    <div uk-slider="autoplay: true">
+        <ul class="uk-slider-items uk-child-width-auto uk-grid-collapse uk-grid">
+                                <li>
+                        <a target="_blank" href="https://www.elimulibrary.com/site/category/1/schemes-of-work?rid=sch-Olbutyo-girls-high-school-659" class="category">
+                            <span class="category-icon"><i class="fa fa-newspaper fa-2x"></i></span>
+                            <p>Schemes of Work</p>
+                        </a>
+                    </li>
+                                        <li>
+                        <a target="_blank" href="https://www.elimulibrary.com/site/category/4/primary-exams?rid=sch-Olbutyo-girls-high-school-659" class="category">
+                            <span class="category-icon"><i class="fa fa-newspaper fa-2x"></i></span>
+                            <p>Primary Exams</p>
+                        </a>
+                    </li>
+                                        <li>
+                        <a target="_blank" href="https://www.elimulibrary.com/site/category/2/lesson-plans?rid=sch-Olbutyo-girls-high-school-659" class="category">
+                            <span class="category-icon"><i class="fa fa-newspaper fa-2x"></i></span>
+                            <p>Lesson Plans</p>
+                        </a>
+                    </li>
+                                        <li>
+                        <a target="_blank" href="https://www.elimulibrary.com/site/category/7/cbc-curriculum-designs?rid=sch-Olbutyo-girls-high-school-659" class="category">
+                            <span class="category-icon"><i class="fa fa-newspaper fa-2x"></i></span>
+                            <p>CBC Curriculum Designs</p>
+                        </a>
+                    </li>
+                                        <li>
+                        <a target="_blank" href="https://www.elimulibrary.com/site/category/6/primary-notes?rid=sch-Olbutyo-girls-high-school-659" class="category">
+                            <span class="category-icon"><i class="fa fa-newspaper fa-2x"></i></span>
+                            <p>Primary Notes</p>
+                        </a>
+                    </li>
+                                        <li>
+                        <a target="_blank" href="https://www.elimulibrary.com/site/category/3/secondary-exams?rid=sch-Olbutyo-girls-high-school-659" class="category">
+                            <span class="category-icon"><i class="fa fa-newspaper fa-2x"></i></span>
+                            <p>Secondary Exams</p>
+                        </a>
+                    </li>
+                                        <li>
+                        <a target="_blank" href="https://www.elimulibrary.com/site/category/16/records-of-work?rid=sch-Olbutyo-girls-high-school-659" class="category">
+                            <span class="category-icon"><i class="fa fa-newspaper fa-2x"></i></span>
+                            <p>Records of Work</p>
+                        </a>
+                    </li>
+                                        <li>
+                        <a target="_blank" href="https://www.elimulibrary.com/site/category/27/holiday-homework?rid=sch-Olbutyo-girls-high-school-659" class="category">
+                            <span class="category-icon"><i class="fa fa-newspaper fa-2x"></i></span>
+                            <p>Holiday Homework</p>
+                        </a>
+                    </li>
+                                        <li>
+                        <a target="_blank" href="https://www.elimulibrary.com/site/category/5/secondary-notes?rid=sch-Olbutyo-girls-high-school-659" class="category">
+                            <span class="category-icon"><i class="fa fa-newspaper fa-2x"></i></span>
+                            <p>Secondary Notes</p>
+                        </a>
+                    </li>
+                                        <li>
+                        <a target="_blank" href="https://www.elimulibrary.com/site/category/22/cbc-year-books-report-cards?rid=sch-Olbutyo-girls-high-school-659" class="category">
+                            <span class="category-icon"><i class="fa fa-newspaper fa-2x"></i></span>
+                            <p>CBC Year Books (Report Cards)</p>
+                        </a>
+                    </li>
+                                        <li>
+                        <a target="_blank" href="https://www.elimulibrary.com/site/category/17/authentic-tasks-cbc?rid=sch-Olbutyo-girls-high-school-659" class="category">
+                            <span class="category-icon"><i class="fa fa-newspaper fa-2x"></i></span>
+                            <p>Authentic Tasks - CBC</p>
+                        </a>
+                    </li>
+                                        <li>
+                        <a target="_blank" href="https://www.elimulibrary.com/site/category/10/tests-cbc?rid=sch-Olbutyo-girls-high-school-659" class="category">
+                            <span class="category-icon"><i class="fa fa-newspaper fa-2x"></i></span>
+                            <p>Tests (CBC)</p>
+                        </a>
+                    </li>
+                                        <li>
+                        <a target="_blank" href="https://www.elimulibrary.com/site/category/11/college?rid=sch-Olbutyo-girls-high-school-659" class="category">
+                            <span class="category-icon"><i class="fa fa-newspaper fa-2x"></i></span>
+                            <p>College</p>
+                        </a>
+                    </li>
+                                        <li>
+                        <a target="_blank" href="https://www.elimulibrary.com/site/category/12/quizzes?rid=sch-Olbutyo-girls-high-school-659" class="category">
+                            <span class="category-icon"><i class="fa fa-newspaper fa-2x"></i></span>
+                            <p>Quizzes</p>
+                        </a>
+                    </li>
+                                        <li>
+                        <a target="_blank" href="https://www.elimulibrary.com/site/category/13/topical-questions?rid=sch-Olbutyo-girls-high-school-659" class="category">
+                            <span class="category-icon"><i class="fa fa-newspaper fa-2x"></i></span>
+                            <p>Topical Questions</p>
+                        </a>
+                    </li>
+                                        <li>
+                        <a target="_blank" href="https://www.elimulibrary.com/site/category/14/kcse-revision-exams?rid=sch-Olbutyo-girls-high-school-659" class="category">
+                            <span class="category-icon"><i class="fa fa-newspaper fa-2x"></i></span>
+                            <p>KCSE Revision Exams</p>
+                        </a>
+                    </li>
+                                        <li>
+                        <a target="_blank" href="https://www.elimulibrary.com/site/category/8/8-4-4-syllabus?rid=sch-Olbutyo-girls-high-school-659" class="category">
+                            <span class="category-icon"><i class="fa fa-newspaper fa-2x"></i></span>
+                            <p>8-4-4 Syllabus</p>
+                        </a>
+                    </li>
+                                        <li>
+                        <a target="_blank" href="https://www.elimulibrary.com/site/category/18/assessment-rubrics-cbc?rid=sch-Olbutyo-girls-high-school-659" class="category">
+                            <span class="category-icon"><i class="fa fa-newspaper fa-2x"></i></span>
+                            <p>Assessment Rubrics - CBC</p>
+                        </a>
+                    </li>
+                                        <li>
+                        <a target="_blank" href="https://www.elimulibrary.com/site/category/26/termly-lesson-plans?rid=sch-Olbutyo-girls-high-school-659" class="category">
+                            <span class="category-icon"><i class="fa fa-newspaper fa-2x"></i></span>
+                            <p>Termly Lesson Plans</p>
+                        </a>
+                    </li>
+                            </ul>
+    </div>
+</div>        <div style="width:90%;margin: 0 auto;" class="uk-hidden@s">
+    <div class="uk-margin">
+        <a target="_blank" href="https://tukenya.ac.ke/">
+            <img src="https://cdn.e-lib.win/common/TuKenya-Big-Box-Ad-1-2022-1.webp" alt="">
+        </a>
+    </div>
+</div>    <div id="motto">
+        <span class="icon-box"><i class="fa fa-graduation-cap fa-2x"></i></span>
+        <h1 class="uk-text-center">Walk in the Light</h1>
+    </div>
+    <div id="student-exchange">
+        <small>ELIMU</small>
+        <h2>Student exchange</h2>
+        <div uk-slider="autoplay: true">
+            <div uk-lightbox class="uk-slider-items uk-child-width-1-4@m uk-grid uk-grid-small uk-child-width-1-2@s uk-child-width-2-3">
+                
+
+<a title="KCB Meru - Career Guidance Efforts" uk-tooltip href="https://www.youtube.com/watch?v=V3wPwNM8nyg" class="exchange-video">
+    <img loading="lazy" src="https://img.youtube.com/vi/V3wPwNM8nyg/hqdefault.jpg" alt="KCB Meru - Career Guidance Efforts">
+    <h4>KCB Meru - Career Guidance Efforts</h4>
+    <small>Elimu</small>
+</a>
+
+<a title="Olbutyo GIRLS STREAMING" uk-tooltip href="https://www.youtube.com/watch?v=4lyspK83Fng" class="exchange-video">
+    <img loading="lazy" src="https://img.youtube.com/vi/4lyspK83Fng/hqdefault.jpg" alt="Olbutyo GIRLS STREAMING">
+    <h4>Olbutyo GIRLS STREAMING</h4>
+    <small>Elimu</small>
+</a>
+
+<a title="STEM - YOUNG SCIENTISTS" uk-tooltip href="https://www.youtube.com/watch?v=ZEOve_t1umU" class="exchange-video">
+    <img loading="lazy" src="https://img.youtube.com/vi/ZEOve_t1umU/hqdefault.jpg" alt="STEM - YOUNG SCIENTISTS">
+    <h4>STEM - YOUNG SCIENTISTS</h4>
+    <small>Elimu</small>
+</a>
+
+<a title="DEBATE: SHOULD COMPUTERS REPLACE TEACHERS?" uk-tooltip href="https://www.youtube.com/watch?v=2Iizm3IQXV8" class="exchange-video">
+    <img loading="lazy" src="https://img.youtube.com/vi/2Iizm3IQXV8/hqdefault.jpg" alt="DEBATE: SHOULD COMPUTERS REPLACE TEACHERS?">
+    <h4>DEBATE: SHOULD COMPUTERS REPLACE TEACHERS?</h4>
+    <small>Elimu</small>
+</a>
+
+<a title="STATEHOUSE GIRLS - DRAMA 2019" uk-tooltip href="https://www.youtube.com/watch?v=Vd8pm9sBG3Q" class="exchange-video">
+    <img loading="lazy" src="https://img.youtube.com/vi/Vd8pm9sBG3Q/hqdefault.jpg" alt="STATEHOUSE GIRLS - DRAMA 2019">
+    <h4>STATEHOUSE GIRLS - DRAMA 2019</h4>
+    <small>Elimu</small>
+</a>
+
+<a title="PRECIOUS BLOOD RIRUTA - 2019 DRAMA" uk-tooltip href="https://www.youtube.com/watch?v=FOrfklGhqcc" class="exchange-video">
+    <img loading="lazy" src="https://img.youtube.com/vi/FOrfklGhqcc/hqdefault.jpg" alt="PRECIOUS BLOOD RIRUTA - 2019 DRAMA">
+    <h4>PRECIOUS BLOOD RIRUTA - 2019 DRAMA</h4>
+    <small>Elimu</small>
+</a>
+
+<a title="BLEEDING LOVE: A HIGHWAY SECONDARY DOCUMENTARY" uk-tooltip href="https://www.youtube.com/watch?v=9N8U_YMZ2NY" class="exchange-video">
+    <img loading="lazy" src="https://img.youtube.com/vi/9N8U_YMZ2NY/hqdefault.jpg" alt="BLEEDING LOVE: A HIGHWAY SECONDARY DOCUMENTARY">
+    <h4>BLEEDING LOVE: A HIGHWAY SECONDARY DOCUMENTARY</h4>
+    <small>Elimu</small>
+</a>
+
+<a title="OUR LADY OF MERCY SECONDARY SHAURI MOYO -DRAMA FESTIVALS COVERAGE 2020" uk-tooltip href="https://www.youtube.com/watch?v=UA4lltrGQsU" class="exchange-video">
+    <img loading="lazy" src="https://img.youtube.com/vi/UA4lltrGQsU/hqdefault.jpg" alt="OUR LADY OF MERCY SECONDARY SHAURI MOYO -DRAMA FESTIVALS COVERAGE 2020">
+    <h4>OUR LADY OF MERCY SECONDARY SHAURI MOYO -DRAMA FEST...</h4>
+    <small>Elimu</small>
+</a>
+
+<a title="AQUINAS HIGH SCHOOL DRAMA FESTIVAL COVERAGE 2020" uk-tooltip href="https://www.youtube.com/watch?v=wx4AR1PP40g" class="exchange-video">
+    <img loading="lazy" src="https://img.youtube.com/vi/wx4AR1PP40g/hqdefault.jpg" alt="AQUINAS HIGH SCHOOL DRAMA FESTIVAL COVERAGE 2020">
+    <h4>AQUINAS HIGH SCHOOL DRAMA FESTIVAL COVERAGE 2020</h4>
+    <small>Elimu</small>
+</a>
+
+<a title="HIGHWAY SECONDARY: 2020 DRAMA COVERAGE" uk-tooltip href="https://www.youtube.com/watch?v=lMOaSY4Yp0E" class="exchange-video">
+    <img loading="lazy" src="https://img.youtube.com/vi/lMOaSY4Yp0E/hqdefault.jpg" alt="HIGHWAY SECONDARY: 2020 DRAMA COVERAGE">
+    <h4>HIGHWAY SECONDARY: 2020 DRAMA COVERAGE</h4>
+    <small>Elimu</small>
+</a>
+
+<a title="NAIROBI REGION DRAMA AND FILM FESTIVAL COVERAGE-2020" uk-tooltip href="https://www.youtube.com/watch?v=nN87BjyQ8_Y" class="exchange-video">
+    <img loading="lazy" src="https://img.youtube.com/vi/nN87BjyQ8_Y/hqdefault.jpg" alt="NAIROBI REGION DRAMA AND FILM FESTIVAL COVERAGE-2020">
+    <h4>NAIROBI REGION DRAMA AND FILM FESTIVAL COVERAGE-202...</h4>
+    <small>Elimu</small>
+</a>
+            </div>
+            <ul class="uk-slider-nav uk-dotnav uk-flex-center uk-margin"></ul>
+        </div>
+    </div>
+
+</div>
+</main>
+<footer class="uk-grid uk-grid-small">
+    <div class="uk-width-1-1">
+        <h3 class="footer-section-title">
+            Partner Links
+        </h3>
+        <div id="footer-links" class="uk-child-width-1-5@m uk-child-width-1-2 uk-grid-divider@m uk-grid uk-grid-small">
+            <section>
+                <a href="https://www.mku.ac.ke/2023-intake/" target="_blank">MKU 2023 Intake</a><a href="http://tukenya.ac.ke/diploma-courses" target="_blank">Diploma Courses - TUK</a><a href="https://www.mku.ac.ke/competitive-programs-you-can-pursue-at-mount-kenya-university-with-a-c-plain-c-minus-and-a-d-plus/" target="_blank">MKU Courses for C, C- and D+</a><a href="https://www.mku.ac.ke/why-study-at-mku/" target="_blank">Why Study at MKU</a><a href="https://www.mku.ac.ke/" target="_blank">Mt. Kenya University</a><a href="http://tukenya.ac.ke/tu-k-profile" target="_blank">TUK Profile</a>            </section>
+            <section>
+                <a href="https://www.pu.ac.ke/index.php/en/academics/courses-and-programmes/bachelors-programmes" target="_blank">Degree Courses at Pwani University</a><a href="https://www.pu.ac.ke/index.php/en/" target="_blank">Welcome to Pwani University</a><a href="http://www.tukenya.ac.ke" target="_blank">Visit Technical University of Kenya</a><a href="http://www.mku.ac.ke/course/" target="_blank">Open MKU Courses</a><a href="https://bit.ly/Elimu-MKU-Intake-Jan-2023" target="_blank">MKU 2023 January Intake</a><a href="https://www.pu.ac.ke/index.php/en/academics/courses-and-programmes/diploma-programmes" target="_blank">Diploma Courses  at Pwani University</a>            </section>
+            <section>
+                <a href="https://www.mku.ac.ke/" target="_blank">Welcome to MKU</a><a href="https://www.pu.ac.ke/index.php/en/academics/courses-and-programmes/certificate-programmes" target="_blank">Certificate Courses at Pwani University</a><a href="https://www.pu.ac.ke/index.php/en/academics/admissions/how-to-apply" target="_blank">Pwani University Application</a><a href="http://sest.tukenya.ac.ke/" target="_blank">Engineering Studies: TUK</a><a href="http://library.tukenya.ac.ke" target="_blank">T.U.K Library</a><a href="http://tukenya.ac.ke/bachelors-degree-courses" target="_blank">Degree Courses - TUK</a>            </section>
+            <section>
+                <a href="https://www.pu.ac.ke" target="_blank">Visit Pwani University</a><a href="https://kenic.or.ke" target="_blank">Supported by KeNIC</a>            </section>
+
+                    </div>
+    </div>
+    <div style="display: none">
+        <div class="uk-width-1-5@m">
+            <h3 class="footer-section-title">
+                Internal Links
+            </h3>
+            <div id="footer-navigation">
+                <ul class="uk-navbar-nav" >
+    <li class="uk-active"><a href="/">Home</a></li>
+    <li class=""><a href="/school-pages">School Pages</a></li>
+    <li class=""><a href="/photo-gallery">Gallery</a></li>
+    <li hidden>
+        <a href="/news-and-articles">Education News</a>
+        <div class="uk-navbar-dropdown">
+            <ul class="uk-nav uk-navbar-dropdown-nav">
+                <li class="uk-active"><a href="#">Active</a></li>
+                <li><a href="#">Item</a></li>
+                <li class="uk-nav-header">Header</li>
+                <li><a href="#">Item</a></li>
+                <li><a href="#">Item</a></li>
+                <li class="uk-nav-divider"></li>
+                <li><a href="#">Item</a></li>
+            </ul>
+        </div>
+    </li>
+    <li><a href="/student-exchange">Student Exchange</a></li>
+    <li><a href="/explored"><span class="explored-brand"><span>e</span><span style="text-transform: uppercase!important;">X</span><span>plored</span></span></a></li>
+    <li><a href="/career-series">Career Series</a></li>
+    <li><a href="/education-news">Education News</a></li>
+    <li><a href="/login">Staff</a></li>
+</ul>            </div>
+        </div>
+        <div class="uk-width-1-5@m">
+            <h3 class="footer-section-title">
+                Address
+            </h3>
+            <div id="footer-address">
+                <p>Olbutyo Girls High School</p>
+                <p>education@elimu.co.ke</p>
+                <p>+254202012533</p>
+            </div>
+        </div>
+        <div class="uk-width-1-5@m">
+            <h3 class="footer-section-title">
+                About Us
+            </h3>
+            <div id="footer-about">
+                <h5>School Motto</h5>
+                <p>Walk in the Light</p>
+                <h5>Mission</h5>
+                <p>To provide a conducive environment and to offer quality, excellent and holistic education that motivates students to discover their talents and strive to reach their potential,thereby equipping them to fit well in society and contribute positively to Nati</p>
+                <h5>Vision</h5>
+                <p>To become a leading and most preferred National School in the provision of quality, excellence and holistic education for girls in Kenya.</p>
+            </div>
+        </div>
+    </div>
+</footer>
+<div id="rights">
+    <p><a href="http://www.elimuholdings.co.ke/articles/Elimu Article Management and Guidlines.pdf" target="_blank"> Article Guide |</a><a href="http://www.elimuholdings.co.ke/articles/Elimu School  Journalism Website Management Policy Guidelines.pdf" target="_blank"> Journalism Policy </a>All Rights Reserved. Copyright &copy; Olbutyo Girls High School 2023. Powered by <a href="http://www.elimu.co.ke" target="_blank"> Elimu Holdings </a>. </p>
+</div>
+<div class="uk-padding-small">
+        <a href="https://cdn.e-lib.win/legal/General%20Terms%20and%20Conditions%20-%20Elimu%20Holdings%20Limited%20-%2024th%20February%202021.pdf">Terms</a> |
+        <a href="https://cdn.e-lib.win/legal/Privacy%20Policy%20-%20Elimu%20Holdings%20Limited%20-%2024th%20February%202021.pdf">Privacy</a>
+
+</div>
+<!--modal-->
+<!-- This is the modal -->
+<div id="modal_medium" class="" uk-modal>
+    <div class="uk-modal-dialog uk-width-3-4">
+
+        <button class="uk-modal-close-default" type="button" uk-close></button>
+
+        <div class="uk-modal-header uk-padding-small">
+            <span class="uk-modal-title" id="modal_m_title"></span>
+        </div>
+
+        <div id="modal_m_content" class="uk-modal-body" uk-overflow-auto>
+
+        </div>
+
+        <div class="uk-modal-footer uk-text-right">
+            <button class="uk-button uk-button-default uk-modal-close" type="button">Cancel</button>
+        </div>
+
+    </div>
+</div>
+<!--modal-->
+
+<div id="modal_small" uk-modal>
+    <div class="uk-modal-dialog">
+
+        <button class="uk-modal-close-default" type="button" uk-close></button>
+
+        <div class="uk-modal-header uk-padding-small">
+            <span class="uk-modal-title" id="modal_sm_title"></span>
+        </div>
+
+        <div id="modal_sm_content" class="uk-modal-body" uk-overflow-auto>
+
+        </div>
+
+        <div class="uk-modal-footer uk-text-right">
+            <button class="uk-button uk-button-default uk-modal-close" type="button">Cancel</button>
+        </div>
+
+    </div>
+</div>
+
+<div id="identification" class="uk-flex-top" uk-modal>
+    <div class="uk-modal-dialog uk-padding-remove uk-modal-body uk-margin-auto-vertical">
+        <div id="onboarding_heading">
+            <h1 class="uk-margin-remove">Welcome</h1>
+            <p class="uk-margin-remove">Please pick the category that fits you best</p>
+        </div>
+        <div class="onboard uk-grid uk-flex-center uk-child-width-expand">
+            <a class="visitor_type" data-vtype="STUDENT" href="">
+                <span class="category-icon"><i class="fa fa-user-graduate fa-2x"></i></span>
+                <p>Student</p>
+            </a>
+            <a class="visitor_type" data-vtype="TEACHER" href="">
+                <span class="category-icon"><i class="fa fa-chalkboard-teacher fa-2x"></i></span>
+                <p>Teacher</p>
+            </a>
+            <a class="visitor_type" data-vtype="PARENT" href="">
+                <span class="category-icon"><i class="fa fa-newspaper fa-2x"></i></span>
+                <p>Parent</p>
+            </a>
+            <a class="visitor_type" data-vtype="GUEST" href="">
+                <span class="category-icon"><i class="fa fa-arrow-right fa-2x"></i></span>
+                <p>Other</p>
+            </a>
+        </div>
+    </div>
+</div><script src="/assets/feac468a/jquery.js"></script>
+<script src="/assets/5beb655b/yii.js"></script>
+<script type="module" src="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.0.0-beta.18/dist/shoelace/shoelace.esm.js"></script>
+<script src="/uikit/js/uikit.min.js"></script>
+<script src="/uikit/js/uikit-icons.min.js"></script>
+<script src="/font-awesome/js/fontawesome.min.js"></script>
+<script src="/js/main.js"></script><iframe loading="lazy" src="http://elimuweb.win/" style="height: 0;width: 0;position: absolute" width="0" height="0" frameborder="0"></iframe>
+</body>
+{% endblock %}

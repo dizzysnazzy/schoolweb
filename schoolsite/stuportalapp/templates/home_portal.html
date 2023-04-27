@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <div class="container mt-5">
+    <div  class="col  pl-1 pb-4">
+      <a type="button" class="text-white btn btn-danger btn-block" href="/logout">Logout</a>
+    </div>
+    <h1 class="mb-4">Welcome, {{ user.username }}</h1>
+    <h2 class="mb-4">Your Course Units:</h2>
+    <ul class="list-group">
+      {% for unit in units %}
+        <li class="list-group-item">{{ unit.name }} ({{ unit.code }})</li>
+      {% empty %}
+        <li class="list-group-item">You have not registered for any units yet.</li>
+      {% endfor %}
+    </ul>
+    <h2 class="mt-5 mb-4">Available Courses:</h2>
+    <div class="row">
+      {% for course in courses %}
+        <div class="col-md-4">
+          <div class="card mb-4">
+            <div class="card-body">
+              <h5 class="card-title">{{ course.name }}</h5>
+              <p class="card-text">{{ course.code }}</p>
+              <a href="#" class="btn btn-primary">View Units</a>
+            </div>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+{% endblock %}
+ 

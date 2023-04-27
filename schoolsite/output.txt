@@ -1,0 +1,4 @@
+Operations to perform:
+  Apply all migrations: admin, auth, contenttypes, sessions, stuportalapp
+Running migrations:
+  Applying stuportalapp.0001_initial... OK

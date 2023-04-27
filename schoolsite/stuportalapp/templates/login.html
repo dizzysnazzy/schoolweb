@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <div class="container mt-5">
+    <h1 class="mb-4">Login</h1>
+    {% if error_message %}
+      <div class="alert alert-danger" role="alert">
+        {{ error_message }}
+      </div>
+    {% endif %}
+    <form method="post">
+      {% csrf_token %}
+      <div class="form-group">
+        <label for="username">Username</label>
+        <input type="text" class="form-control" id="username" name="username">
+      </div>
+      <div class="form-group">
+        <label for="password">Password</label>
+        <input type="password" class="form-control" id="password" name="password">
+      </div>
+      <button type="submit" class="btn btn-primary">Login</button>
+      <a type="button" class="text-white btn btn-primary btn-block" href="/register">Register</a>
+    </form>
+  </div>
+{% endblock %}
