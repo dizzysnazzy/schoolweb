@@ -1,0 +1,129 @@
+/* GENERAL */
+body {
+    background: rgba(39, 232, 229, 0.3);
+}
+
+/* HEADER */
+.header {
+    background-color: aliceblue;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: baseline;
+    padding: 4px;
+    margin-bottom: 10px;
+    margin-top: 0 !important;
+    align-self: center;
+    /* margin-top: 0%; */
+    /* flex-basis: 100px;
+    flex-shrink: 2; */
+}
+
+.nav-item {
+    margin: auto;    
+}
+
+.nav-item:hover {
+    background-color: chartreuse;    
+}
+
+a {
+    text-decoration: none;
+}
+
+/* BODY */
+.logo-image {
+    height: auto;
+    max-width: 100%;
+    /* filter:grayscale(100%); */
+    /* display: block; */
+    /* margin: 10px auto; */
+}
+
+#logo {
+    height: auto;
+    width: auto;
+}
+
+.olb-flex {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.body-intro {
+    background-color: azure;
+    padding: 10px;
+    margin: 10px;
+}
+
+h1 {
+    text-align: center;
+    color: rgb(243, 188, 151);
+}
+
+h2 {
+    color: brown;
+    text-align: center;
+}
+
+h2:hover {
+    color: blue;
+}
+
+.image-item {
+    margin:auto;
+    width:100%;
+    border: 2px solid white;
+}
+
+.image-item:hover {
+    animation: red-to-black 4s ease-out 0s 1  reverse;
+}
+
+.images {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    justify-content: center;
+    align-content: center;
+    grid-column-gap: 10px;
+    grid-row-gap: 10px;
+    
+}
+
+
+
+/* HOME */
+/* ABOUT */
+/* SCHOOL ADM */
+/* STUDENT PORTAL */
+/* E-LEARNING */
+/* TENDERS */
+/* DOWNLOADS */
+/* CONTACTS */
+/* HOME PORTAL */
+/* LOGIN */
+/* REGISTER */
+
+/* FOOTER */
+.footer {
+    background: grey;
+    margin: 10px;
+    padding: 10px;
+    color: rgb(255, 255, 255);
+}
+
+@keyframes red-to-black {
+    0% {
+        background: red;
+        transform: translate(0px, 0px);
+    }
+    50% {
+        background: green;
+        transform: rotate(-45deg);
+    }
+    100% {
+        background: black;
+        transform: translate(20px, 20px);
+    }
+}
