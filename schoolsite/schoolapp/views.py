@@ -20,7 +20,7 @@ def school_admin(request):
     return render(request, 'schooladmin.html')
 
 def tenders(request):
-    return render(request, 'tenders.html')
+    return render(request, 'tenders.html')    
 
 
 

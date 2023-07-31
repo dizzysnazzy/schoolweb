@@ -1,66 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <!-- 
-        <img src="../static/images/logo.jpeg" style="width:30px;"/>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>{% block title %}{% endblock %}</title>
+        {% load static %}
+        <link rel="stylesheet" type="text/css" href="{% static 'css/styles.css' %}">
+        <!-- <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css"> -->
+        
+        <script type="text/javascript" src="{% static 'js/bootstrap.min.js' %}"></script>
+    </head>
+    <body>
+        <header class="w3-container w3-teal header">        
+            <div class="nav-item">
+                <a href="/">HOME</a>
+            </div>
+            <div class="nav-item">
+                <a href="/about">ABOUT US</a>
+            </div>
+            <div class="nav-item">
+                <a href="/school_admin">SCHOOL GALLERY</a> 
+            </div>
+            <div class="nav-item">
+                <a href="/student_portal">STUDENT PORTAL</a>
+            </div>
+            <div class="nav-item">
+                <a href="/e_learning">E-LEARNING</a>
+            </div>
+            <div class="nav-item">
+                <a href="/tenders">TENDERS</a>
+            </div>
+            <div class="nav-item">
+                <a href="/downloads">DOWNLOADS</a>
+            </div>
+            <div class="nav-item">
+                <a href="/contacts">CONTACT US</a>
+            </div>
+        </header>
 
-    -->
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{% block title %}{% endblock %}</title>
-    {% load static %}
-    <link rel="stylesheet" type="text/css" href="{% static 'css/styles.css' %}">
-    <!-- <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css"> -->
-    
-    <script type="text/javascript" src="{% static 'js/bootstrap.min.js' %}"></script>
-</head>
-<body>
-    <header class="w3-container w3-teal header">        
-        <div class="nav-item">
-            <a href="/">HOME</a>
-        </div>
-        <div class="nav-item">
-            <a href="/about">ABOUT US</a> 
-        </div>
-        <div class="nav-item">
-            <a href="/school_admin">SCHOOL GALLERY</a> 
-        </div>
-        <div class="nav-item">
-            <a href="/student_portal">STUDENT PORTAL</a>
-        </div>
-        <div class="nav-item">
-            <a href="/e_learning">E-LEARNING</a>
-        </div>
-        <div class="nav-item">
-            <a href="/tenders">TENDERS</a>
-        </div>
-        <div class="nav-item">
-            <a href="/downloads">DOWNLOADS</a>
-        </div>
-        <div class="nav-item">
-            <a href="/contacts">CONTACT US</a>
-        </div>
-    </header>
+        <main>
+            <div class="body-intro">
+                <img class="logo-image" src="../static/images/image1.jpg"/>
+            </div>
+            <div class="olb-flex">
+                <div id="logo"><img src="../static/images/logo.jpeg"/></div>
+                <div style="margin-left: 4px;"><h1>OLBUTYO SECONDARY SCHOOL</h1></div>
+            </div>
+            <div class="block-content">
+                {% block content %}
+                {% endblock %}
+            </div>
+                
+            {% include "carousel.html" %}
 
-    <main>
-        <div class="body-intro">
-            <img class="logo-image" src="../static/images/image1.jpg"/>
-        </div>
-        <div class="olb-flex">
-            <div id="logo"><img src="../static/images/logo.jpeg"/></div>
-            <div style="margin-left: 4px;"><h1>OLBUTYO SECONDARY SCHOOL</h1></div>
-        </div>
-        <div class="block-content">
-            {% block content %}
-            {% endblock %}
-        </div>
-    </main>
+        </main>
 
-    <footer class="footer">
-        <p>OLBUTYO SECONDARY SCHOOL</p>
-        <p>488-20400</p>
-        <p>BOMET, KENYA</p>
-    </footer>
-</body>
+        <footer class="footer">
+            <p>OLBUTYO SECONDARY SCHOOL</p>
+            <p>488-20400</p>
+            <p>BOMET, KENYA</p>
+        </footer>
+    </body>
+    <script type="text/javascript" src="{% static 'js/script.js' %}"></script>
 </html>
