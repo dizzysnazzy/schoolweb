@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <style>
+                    /* CAROUSEL */
+            * {box-sizing:border-box}
+
+            /* Slideshow container */
+            .slideshow-container {
+                max-width: 100%;
+                position: relative;
+                margin: auto;
+                /* box-sizing:border-box; */
+            }
+
+            /* Make the images invisible by default */
+            .Containers {
+                display: none;
+            }
+
+            /* forward & Back buttons */
+            .Back, .foward {
+                cursor: pointer;
+                position: absolute;
+                top: 48%;
+                width: auto;
+                margin-top: -23px;
+                padding: 17px;
+                color: rgb(5, 202, 15);
+                font-weight: bold;
+                font-size: 19px;
+                transition: 0.4s ease;
+                border-radius: 0 5px 5px 0;
+                user-select: none;
+            }
+
+            /* Place the "forward button" to the right */
+            .foward {
+                margin-left: 95%;
+                border-radius: 4px 0 0 4px;
+            }
+
+            /*when the user hovers,add a black background with some little opacity */
+            .Back:hover {
+                background-color: rgba(250,0,0,0.8);
+            } 
+            .foward:hover {
+                background-color: rgba(250,0,0,0.8);
+            }
+
+            /* Caption Info */
+            .Info {
+                color: rgb(48, 0, 102);
+                font-size: 24px;
+                padding: 10px 14px;
+                position: absolute;
+                bottom: 10px;
+                width: 100%;
+                text-align: center;
+                font-weight: 100;
+            }
+
+            /* Worknumbering (1/3 etc) */
+            .MessageInfo {
+                color: rgb(250, 142, 0);
+                font-size: 14px;
+                font-weight: 100;
+                padding: 10px 14px;
+                position: absolute;
+                top: 0;
+            }
+
+            /* The circles or bullets and indicators */
+            .dots {
+                cursor: pointer;
+                height: 16px;
+                width: 16px;
+                margin: 0 3px;
+                background-color: #acc;
+                border-radius: 50%;
+                display: inline-block;
+                transition: background-color 0.5s ease;
+            }
+
+            .enable, .dots:hover {
+                background-color: #717161;
+            }
+
+            /* Faint animation */
+            .fade {
+                -webkit-animation-name: fade;
+                -webkit-animation-duration: 1.4s;
+                animation-name: fade;
+                animation-duration: 1.4s;
+            }
+
+            @-webkit-keyframes fade {
+                from {opacity: .5}
+                to {opacity: 2}
+            }
+
+            @keyframes fade {
+                from {opacity: .5}
+                to {opacity: 2}
+            }
+        </style>
+    </head>
+    <body>
+            <!-- Slideshow container -->
+        <div class="slideshow-container fade">
+
+            <!-- Full images with numbers and message Info -->
+            <div class="Containers">
+                <img src="../static/images/image1.jpg" style="width:100%; height: 400px;">
+                <div class="MessageInfo">1 / 8</div>
+                <div class="Info"><h1>Administration</h1></div>
+            </div>
+
+            <div class="Containers">
+                <img src="../static/images/admin1.jpg" style="width:100%; height: 400px;">
+                <div class="MessageInfo">2 / 8</div>
+                <div class="Info"><h1>Second Administration</h1></div>
+            </div>
+
+            <div class="Containers">
+                <img src="../static/images/image2.jpg" style="width:100%; height: 400px;">
+                <div class="MessageInfo">3 / 8</div>
+                <div class="Info"><h1>Classes</h1></div>
+            </div>
+
+            <div class="Containers">
+                <img src="../static/images/library1.jpg" style="width:100%; height: 400px;">
+                <div class="MessageInfo">4 / 8</div>
+                <div class="Info"><h1>Library</h1></div>
+            </div>
+
+            <div class="Containers">
+                <img src="../static/images/kidStudy1.jpg" style="width:100%; height: 400px;">
+                <div class="MessageInfo">5 / 8</div>
+                <div class="Info"><h1>Student in Library</h1></div>
+            </div>
+            
+            <div class="Containers">
+                <img src="../static/images/desks1.jpg" style="width:100%; height: 400px;">
+                <div class="MessageInfo">6 / 8</div>
+                <div class="Info"><h1>Classroom</h1></div>
+            </div>
+
+            <div class="Containers">
+                <img src="../static/images/admin2.jpg" style="width:100%; height: 400px;">
+                <div class="MessageInfo">7 / 8</div>
+                <div class="Info"><h1>School Building</h1></div>
+            </div>
+
+            <div class="Containers">
+                <img src="../static/images/tablet1.jpg" style="width:100%; height: 400px;">
+                <div class="MessageInfo">8 / 8</div>
+                <div class="Info"><h1>Computer Lab</h1></div>
+            </div>
+            <!-- Back and forward buttons -->
+            <div>
+            <a class="Back" onclick="plusSlides(-1)">&#10094;</a>
+            </div>
+            <div>
+            <a class="foward" onclick="plusSlides(1)">&#10095;</a>
+            </div>
+        </div>
+         
+        <br>
+
+        <!-- The circles/dots -->
+        <div style="text-align:center">
+            <span class="dots" onclick="currentSlide(1)"></span>
+            <span class="dots" onclick="currentSlide(2)"></span>
+            <span class="dots" onclick="currentSlide(3)"></span>
+            <span class="dots" onclick="currentSlide(4)"></span>
+            <span class="dots" onclick="currentSlide(5)"></span>
+            <span class="dots" onclick="currentSlide(6)"></span>
+            <span class="dots" onclick="currentSlide(7)"></span>
+            <span class="dots" onclick="currentSlide(8)"></span>
+        </div>
+        
+    </body>
+
+</html>
+
+
